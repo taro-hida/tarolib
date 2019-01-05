@@ -1,3 +1,4 @@
+#csvをparseして2次元arrayで返します
 def parse_csv(csv_path):
 	rv = []
 	with open( csv_path ) as f:
@@ -9,4 +10,14 @@ def parse_csv(csv_path):
 		dict_data = line.split(',')
 		rv.append(dict_data)
 
+	return rv
+
+#txtをparseしてarrayで返します
+def parse_txt(txt_path):
+	rv = []
+	with open( txt_path ) as f:
+		txt_data = f.read()
+	
+	rv = txt_data.splitlines()
+	
 	return rv
